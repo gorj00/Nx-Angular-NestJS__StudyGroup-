@@ -31,6 +31,12 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "libs": {
+      "tags": []
+    },
+    "xplat": {
+      "tags": []
     }
   }
 }

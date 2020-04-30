@@ -1,4 +1,10 @@
-# StudyGroup
+# Nx Monorepo + Angular + Nativescript + NgRx + NestJS 
+## StudyGroup App 
+- one repository contains code for: 
+  - **Angular**: web app, 
+  - **Angular + Nativescript + xplat**: mobile apps (Android & iOS),
+  - **NestJS**: backend build on Node.js framework,
+  - **NgRx**: state management for web and mobile apps
 
 This project was generated using [Nx](https://nx.dev).
 

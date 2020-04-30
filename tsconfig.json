@@ -16,7 +16,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@study-group/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@study-group/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@study-group/*": ["libs/*"],
+      "@study-group/nativescript": ["xplat/nativescript/index.ts"],
+      "@study-group/nativescript/*": ["xplat/nativescript/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
