@@ -259,6 +259,38 @@
           }
         }
       }
+    },
+    "studgr-redux": {
+      "projectType": "library",
+      "root": "libs/studgr-redux",
+      "sourceRoot": "libs/studgr-redux/src",
+      "prefix": "study-group",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/studgr-redux/tsconfig.lib.json",
+              "libs/studgr-redux/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/studgr-redux/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/studgr-redux/jest.config.js",
+            "tsConfig": "libs/studgr-redux/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/studgr-redux/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

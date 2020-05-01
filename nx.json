@@ -37,6 +37,9 @@
     },
     "xplat": {
       "tags": []
+    },
+    "studgr-redux": {
+      "tags": []
     }
   }
 }

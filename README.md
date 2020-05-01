@@ -6,6 +6,12 @@
   - **NestJS**: backend build on Node.js framework,
   - **NgRx**: state management for web and mobile apps
 
+## Basic Development Commands
+- new StudyGroup app redux feature: 
+```bash
+ng g @nrwl/angular:ngrx <feature-name> --module=libs/studgr-redux/src/lib/studgr-redux.module.ts --directory studgr-redux/<feature-name> --facade
+```
+
 This project was generated using [Nx](https://nx.dev).
 
 <p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>

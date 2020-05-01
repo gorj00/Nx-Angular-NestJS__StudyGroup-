@@ -1,0 +1,3 @@
+export const LOADING = 'DASHBOARD_LOADING';
+export const SUCCESS = 'DASHBOARD_SUCCESS';
+export const FAILURE = 'DASHBOARD_FAILURE';

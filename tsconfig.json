@@ -19,7 +19,8 @@
       "@study-group/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@study-group/*": ["libs/*"],
       "@study-group/nativescript": ["xplat/nativescript/index.ts"],
-      "@study-group/nativescript/*": ["xplat/nativescript/*"]
+      "@study-group/nativescript/*": ["xplat/nativescript/*"],
+      "@study-group/studgr-redux": ["libs/studgr-redux/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
