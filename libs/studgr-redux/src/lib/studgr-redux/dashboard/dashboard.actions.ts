@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import * as EVENTS from './dasboard.events';
+import * as EVENTS from './dashboard.events';
 
 export class DasboardLoading implements Action {
   readonly type = EVENTS.LOADING;

@@ -1,6 +1,6 @@
 import { createReducer, on, Action } from '@ngrx/store';
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
-import * as EVENTS from './dasboard.events';
+import * as EVENTS from './dashboard.events';
 
 import * as DashboardActions from './dashboard.actions';
 import { DashboardEntity } from './dashboard.models';
