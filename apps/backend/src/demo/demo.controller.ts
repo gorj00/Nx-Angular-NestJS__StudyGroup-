@@ -9,7 +9,7 @@ export class DemoController {
 
   @Get(':id')
   get(@Param() params) {
-      return this.service.getDemo(params.id);
+      return { message: 'Hello, api!' };
   }
 
   @Post()

@@ -26,7 +26,7 @@
       "tags": [],
       "implicitDependencies": ["study-group"]
     },
-    "api": {
+    "backend": {
       "tags": []
     },
     "api-interfaces": {
