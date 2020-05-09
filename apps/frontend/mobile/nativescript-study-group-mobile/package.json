@@ -1,0 +1,37 @@
+{
+  "name": "studygroupmobile",
+  "nativescript": {
+    "id": "org.nativescript.studygroupmobile"
+  },
+  "description": "NativeScript Application",
+  "scripts": {
+    "postinstall": "node ./tools/xplat-postinstall.js && npm run ngcc",
+    "ngcc": "ngcc --properties es2015 module main --first-only"
+  },
+  "dependencies": {
+    "@angular/animations": "~9.1.0",
+    "@angular/common": "~9.1.0",
+    "@angular/compiler": "~9.1.0",
+    "@angular/core": "~9.1.0",
+    "@angular/forms": "~9.1.0",
+    "@angular/platform-browser": "~9.1.0",
+    "@angular/platform-browser-dynamic": "~9.1.0",
+    "@angular/router": "~9.1.0",
+    "@nativescript/angular": "https://github.com/nstudio/ns-ng/blob/master/nativescript-angular-9.0.0.tgz?raw=true",
+    "nativescript-angular": "https://github.com/nstudio/ns-ng/blob/master/nativescript-angular-compat.tgz?raw=true",
+    "nativescript-intl": "~3.0.0",
+    "nativescript-theme-core": "^1.0.4",
+    "rxjs": "^6.5.0",
+    "tns-core-modules": "~6.4.0",
+    "tslib": "~1.11.0",
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "~9.1.0",
+    "@ngtools/webpack": "~9.1.0",
+    "nativescript-dev-webpack": "~1.5.0",
+    "terser-webpack-plugin": "~2.2.0",
+    "tns-platform-declarations": "~6.4.0",
+    "typescript": "~3.8.3"
+  }
+}
