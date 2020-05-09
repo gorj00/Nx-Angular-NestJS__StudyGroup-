@@ -26,16 +26,13 @@
       "tags": [],
       "implicitDependencies": ["study-group"]
     },
-    "api": {
+    "backend": {
       "tags": []
     },
     "api-interfaces": {
       "tags": []
     },
     "libs": {
-      "tags": []
-    },
-    "xplat": {
       "tags": []
     },
     "studgr-redux": {
@@ -47,6 +44,9 @@
     "frontend/web/study-group-e2e": {
       "tags": [],
       "implicitDependencies": ["frontend-web-study-group"]
+    },
+    "studgr-core": {
+      "tags": []
     }
   }
 }

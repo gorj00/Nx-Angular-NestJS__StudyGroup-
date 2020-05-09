@@ -126,20 +126,20 @@
         }
       }
     },
-    "api": {
-      "root": "apps/api",
-      "sourceRoot": "apps/api/src",
+    "backend": {
+      "root": "apps/backend",
+      "sourceRoot": "apps/backend/src",
       "projectType": "application",
-      "prefix": "api",
+      "prefix": "backend",
       "schematics": {},
       "architect": {
         "build": {
           "builder": "@nrwl/node:build",
           "options": {
-            "outputPath": "dist/apps/api",
-            "main": "apps/api/src/main.ts",
-            "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "outputPath": "dist/apps/backend",
+            "main": "apps/backend/src/main.ts",
+            "tsConfig": "apps/backend/tsconfig.app.json",
+            "assets": ["apps/backend/src/assets"]
           },
           "configurations": {
             "production": {
@@ -148,8 +148,8 @@
               "inspect": false,
               "fileReplacements": [
                 {
-                  "replace": "apps/api/src/environments/environment.ts",
-                  "with": "apps/api/src/environments/environment.prod.ts"
+                  "replace": "apps/backend/src/environments/environment.ts",
+                  "with": "apps/backend/src/environments/environment.prod.ts"
                 }
               ]
             }
@@ -158,24 +158,24 @@
         "serve": {
           "builder": "@nrwl/node:execute",
           "options": {
-            "buildTarget": "api:build"
+            "buildTarget": "backend:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/api/tsconfig.app.json",
-              "apps/api/tsconfig.spec.json"
+              "apps/backend/tsconfig.app.json",
+              "apps/backend/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/api/**"]
+            "exclude": ["**/node_modules/**", "!apps/backend/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/api/jest.config.js",
-            "tsConfig": "apps/api/tsconfig.spec.json",
+            "jestConfig": "apps/backend/jest.config.js",
+            "tsConfig": "apps/backend/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -228,33 +228,6 @@
             "tsConfig": [
               "testing/tsconfig.libs.json",
               "testing/tsconfig.libs.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        }
-      }
-    },
-    "xplat": {
-      "root": "xplat",
-      "sourceRoot": "xplat",
-      "projectType": "library",
-      "prefix": "study-group",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "testing/jest.xplat.config.js",
-            "tsConfig": "testing/tsconfig.xplat.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "testing/test-setup.ts"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "testing/tsconfig.xplat.json",
-              "testing/tsconfig.xplat.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -431,6 +404,38 @@
               "!apps/frontend/web/study-group-e2e/**"
             ]
           }
+        }
+      }
+    },
+    "studgr-core": {
+      "projectType": "library",
+      "root": "libs/studgr-core",
+      "sourceRoot": "libs/studgr-core/src",
+      "prefix": "study-group",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/studgr-core/tsconfig.lib.json",
+              "libs/studgr-core/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/studgr-core/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/studgr-core/jest.config.js",
+            "tsConfig": "libs/studgr-core/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/studgr-core/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     }
