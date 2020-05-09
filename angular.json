@@ -234,33 +234,6 @@
         }
       }
     },
-    "xplat": {
-      "root": "xplat",
-      "sourceRoot": "xplat",
-      "projectType": "library",
-      "prefix": "study-group",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "testing/jest.xplat.config.js",
-            "tsConfig": "testing/tsconfig.xplat.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "testing/test-setup.ts"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "testing/tsconfig.xplat.json",
-              "testing/tsconfig.xplat.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        }
-      }
-    },
     "studgr-redux": {
       "projectType": "library",
       "root": "libs/studgr-redux",
