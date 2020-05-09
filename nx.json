@@ -19,13 +19,6 @@
     }
   },
   "projects": {
-    "study-group": {
-      "tags": []
-    },
-    "study-group-e2e": {
-      "tags": [],
-      "implicitDependencies": ["study-group"]
-    },
     "api": {
       "tags": []
     },
@@ -40,6 +33,13 @@
     },
     "studgr-redux": {
       "tags": []
+    },
+    "frontend-web-study-group": {
+      "tags": []
+    },
+    "frontend/web/study-group-e2e": {
+      "tags": [],
+      "implicitDependencies": ["frontend-web-study-group"]
     }
   }
 }
