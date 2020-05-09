@@ -6,6 +6,9 @@
   - **NestJS**: backend build on Node.js framework,
   - **NgRx**: state management for web and mobile apps
 
+## StudyGroup Documentation
+- project documentation [here](./project/study-group/Study Group - Project.md)
+
 ## Basic Development Commands
 - new StudyGroup app redux feature: 
 ```bash
