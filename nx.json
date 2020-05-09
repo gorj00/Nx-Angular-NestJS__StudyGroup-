@@ -22,6 +22,10 @@
     "study-group": {
       "tags": []
     },
+    "study-group-e2e": {
+      "tags": [],
+      "implicitDependencies": ["study-group"]
+    },
     "api": {
       "tags": []
     },
