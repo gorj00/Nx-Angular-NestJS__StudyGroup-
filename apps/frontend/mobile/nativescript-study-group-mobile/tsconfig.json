@@ -15,12 +15,6 @@
     "paths": {
       "~/*": ["src/*"],
       "@study-group/*": ["../../../libs/*"],
-      "@study-group/nativescript": [
-        "../../../xplat/nativescript/index.ts"
-      ],
-      "@study-group/nativescript/*": [
-        "../../../xplat/nativescript/*"
-      ],
       "*": ["./node_modules/*"]
     }
   },
