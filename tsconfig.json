@@ -21,9 +21,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@study-group/api-interfaces": [
-        "libs/api-interfaces/src/index.ts"
-      ],
       "@study-group/*": [
         "libs/*"
       ],
