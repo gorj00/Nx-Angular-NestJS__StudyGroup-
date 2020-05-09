@@ -47,6 +47,9 @@
     "frontend/web/study-group-e2e": {
       "tags": [],
       "implicitDependencies": ["frontend-web-study-group"]
+    },
+    "studgr-core": {
+      "tags": []
     }
   }
 }
