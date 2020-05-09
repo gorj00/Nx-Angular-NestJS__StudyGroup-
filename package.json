@@ -25,7 +25,11 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
+    "clean": "npx rimraf -- hooks node_modules package-lock.json && npm i",
+    "start.nativescript.study-group-mobile.ios": "cd apps/frontend/mobile/nativescript-study-group-mobile && tns debug ios --env.aot --no-hmr --emulator",
+    "start.nativescript.study-group-mobile.android": "cd apps/frontend/mobile/nativescript-study-group-mobile && tns debug android --env.aot --no-hmr --emulator",
+    "clean.nativescript.study-group-mobile": "cd apps/frontend/mobile/nativescript-study-group-mobile && npx rimraf -- hooks node_modules platforms package-lock.json && npm i && npx rimraf -- package-lock.json"
   },
   "private": true,
   "dependencies": {
