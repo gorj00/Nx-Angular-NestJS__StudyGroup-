@@ -9,7 +9,7 @@ export class StudyGroupListService {
   constructor(private api: BackendCommunicationService) {
   }
 
-  fetchGroupList(): Observable<models.IStudyGroupList> {
-    return this.api.Get<models.IStudyGroupList>(endpoints.studyGroups());
+  fetchGroupList(): Observable<models.IStudyGroupList[]> {
+    return this.api.Get<models.IStudyGroupList[]>(endpoints.studyGroups());
   }
 }

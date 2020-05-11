@@ -12,7 +12,6 @@ import { DatabasesModule } from '../databases/databases.module';
 // Databases config files
 import StudyGroup_MariaDB from '../databases/study-group.mariadb.config';
 
-
 @Module({
   imports: [
     ConfigModule.forRoot({

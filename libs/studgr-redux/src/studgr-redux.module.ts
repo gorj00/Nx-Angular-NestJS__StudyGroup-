@@ -18,9 +18,11 @@ import {
   BackendCommunicationService,
   backendCommunicationService
 } from './studgr-redux/backend-communication.service'
-
-
 /* To use redux in an app, import this module and declare it as an import in the app module */
+
+/* Generate a new redux feature:
+* ng g @nrwl/angular:ngrx <feature-name> --module=libs/studgr-redux/src/lib/studgr-redux.module.ts --directory studgr-redux/<feature-name> --facade
+*/
 
 @NgModule({
   imports: [

@@ -11,7 +11,7 @@ export class StudyGroupListCoreContainer {
   }
 
   // Observable of fetched study sgroups
-  getAllStudyGroups$: Observable<IStudyGroupList> = this.studyGroupListFacade
+  getAllStudyGroups$: Observable<IStudyGroupList[]> = this.studyGroupListFacade
   .getAllStudyGroups$
     .pipe(
       map(studyGroups => studyGroups)

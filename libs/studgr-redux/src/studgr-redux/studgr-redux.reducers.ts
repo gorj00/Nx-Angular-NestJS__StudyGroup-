@@ -7,13 +7,9 @@ import * as models from '@study-group/studgr-models/src/models/study-group-list.
 // https://www.concretepage.com/angular-2/ngrx/ngrx-store-4-angular-5-tutorial
 
 export interface AppState {
-  loading?: boolean;
   studyGroupList?: models.IStudyGroupListPartialState;
-  error?: any;
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-  loading: null,
   studyGroupList: StudyGroupListReducer,
-  error: null,
 };

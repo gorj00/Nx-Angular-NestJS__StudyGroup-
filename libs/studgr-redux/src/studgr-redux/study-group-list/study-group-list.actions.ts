@@ -9,7 +9,7 @@ export class StudyGroupListRequest implements Action {
 
 export class StudyGroupListSResponse implements Action {
   readonly type = EVENTS.RESPONSE_ALL;
-  constructor(public payload: models.IStudyGroupList) {}
+  constructor(public payload: models.IStudyGroupList[]) {}
 }
 
 // Feature common failure

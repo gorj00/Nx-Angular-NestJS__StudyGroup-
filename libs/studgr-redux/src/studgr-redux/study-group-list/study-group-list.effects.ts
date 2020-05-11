@@ -14,7 +14,7 @@ export class StudyGroupListEffects {
     ofType<actions.StudyGroupListRequest>(EVENTS.REQUEST_ALL),
     switchMap(() =>
         this.service.fetchGroupList().pipe(
-            map((data: models.IStudyGroupList) => new actions.StudyGroupListSResponse(data)),
+            map((data: models.IStudyGroupList[]) => new actions.StudyGroupListSResponse(data)),
             catchError(error => of(new actions.StudyGroupFailure(error))),
         ),
     ),

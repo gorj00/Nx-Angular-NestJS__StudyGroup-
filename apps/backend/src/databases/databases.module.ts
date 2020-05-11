@@ -6,6 +6,17 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 // DB Entities
 import { DemoModule } from '../demo/demo.module';
+import { StudyGroupModule } from '../study-group/study-group.module';
+import { SubjectModule } from '../subject/subject.module';
+
+
+/* Generate a new feature:
+* ng g @nestjs/schematics:module <module-name> --source-root apps/backend/src
+* ng g @nestjs/schematics:controller <controller-name> --source-root apps/backend/src
+*
+* Generate a new subfeature:
+* ng g @nestjs/schematics:controller <controller-name> --path app/<feature-name> --source-root apps/backend/src
+*/
 
 @Module({
   imports: [
@@ -13,7 +24,9 @@ import { DemoModule } from '../demo/demo.module';
       useFactory: (config: ConfigService) => config.get('database'),
       inject: [ConfigService]
     }),
-    DemoModule
+    DemoModule,
+    StudyGroupModule,
+    SubjectModule,
   ]
 })
 export class DatabasesModule {}

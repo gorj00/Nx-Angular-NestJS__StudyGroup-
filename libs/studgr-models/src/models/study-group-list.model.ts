@@ -1,6 +1,6 @@
 export interface IStudyGroupListPartialState {
-  allStudyGroups: IStudyGroupList;
-  studentStudyGroups?: IStudyGroupList;
+  allStudyGroups: IStudyGroupList[];
+  studentStudyGroups?: IStudyGroupList[];
 }
 
 export interface IStudyGroupList {
