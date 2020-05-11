@@ -16,9 +16,7 @@
             "outputPath": "dist/apps/backend",
             "main": "apps/backend/src/main.ts",
             "tsConfig": "apps/backend/tsconfig.app.json",
-            "assets": [
-              "apps/backend/src/assets"
-            ]
+            "assets": ["apps/backend/src/assets"]
           },
           "configurations": {
             "production": {
@@ -47,10 +45,7 @@
               "apps/backend/tsconfig.app.json",
               "apps/backend/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/backend/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/backend/**"]
           }
         },
         "test": {
@@ -85,9 +80,7 @@
               "testing/tsconfig.libs.json",
               "testing/tsconfig.libs.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -105,10 +98,7 @@
               "libs/studgr-redux/tsconfig.lib.json",
               "libs/studgr-redux/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/studgr-redux/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/studgr-redux/**"]
           }
         },
         "test": {
@@ -259,9 +249,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/frontend/web/study-group-e2e/tsconfig.e2e.json"
-            ],
+            "tsConfig": ["apps/frontend/web/study-group-e2e/tsconfig.e2e.json"],
             "exclude": [
               "**/node_modules/**",
               "!apps/frontend/web/study-group-e2e/**"
@@ -283,10 +271,7 @@
               "libs/studgr-core/tsconfig.lib.json",
               "libs/studgr-core/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/studgr-core/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/studgr-core/**"]
           }
         },
         "test": {
@@ -341,6 +326,38 @@
               ]
             }
           }
+        }
+      }
+    },
+    "studgr-models": {
+      "projectType": "library",
+      "root": "libs/studgr-models",
+      "sourceRoot": "libs/studgr-models/src",
+      "prefix": "study-group",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/studgr-models/tsconfig.lib.json",
+              "libs/studgr-models/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/studgr-models/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/studgr-models/jest.config.js",
+            "tsConfig": "libs/studgr-models/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/studgr-models/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     }

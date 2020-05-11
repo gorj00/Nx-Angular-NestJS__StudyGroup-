@@ -14,12 +14,7 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
@@ -38,14 +33,15 @@
     },
     "frontend/web/study-group-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "frontend-web-study-group"
-      ]
+      "implicitDependencies": ["frontend-web-study-group"]
     },
     "studgr-core": {
       "tags": []
     },
     "nativescript-study-group-mobile": {
+      "tags": []
+    },
+    "studgr-models": {
       "tags": []
     }
   }

@@ -1,0 +1,5 @@
+// ALL Study groups
+export const REQUEST_ALL = 'STUDY_GROUP_ALL_LIST_REQUEST';
+export const RESPONSE_ALL = 'STUDY_GROUP_ALL_LIST_RESPONSE';
+
+export const FAILURE = 'STUDY_GROUP_FAILURE';
