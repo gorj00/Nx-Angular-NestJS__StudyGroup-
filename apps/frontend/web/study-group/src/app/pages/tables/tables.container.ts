@@ -4,10 +4,11 @@ import { StudyGroupListFacade } from '@study-group/studgr-redux';
 
 @Component({
   selector: 'app-main-tables',
-  template: `<app-tables></app-tables>`,
+  template: `
+    <app-tables [studyGroups]="allStudyGroups$ | async"></app-tables>
+  `
 })
-export class TablesContainer extends StudyGroupListCoreContainer  {
-
+export class TablesContainer extends StudyGroupListCoreContainer {
   constructor(facade: StudyGroupListFacade) {
     super(facade);
   }

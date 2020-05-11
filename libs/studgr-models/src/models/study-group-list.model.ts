@@ -4,7 +4,7 @@ export interface IStudyGroupListPartialState {
 }
 
 export interface IStudyGroupList {
-  id: number;
+  id_study_group: number;
   studentId: number;
   name: string;
   time?: string;
