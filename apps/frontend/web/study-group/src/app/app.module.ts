@@ -14,7 +14,6 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { StudgrCoreModule } from '@study-group/studgr-core';
 
-
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -29,7 +28,7 @@ import { StudgrCoreModule } from '@study-group/studgr-core';
   declarations: [
     AppComponent,
     ContentLayoutComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

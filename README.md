@@ -15,6 +15,11 @@
 ng g @nrwl/angular:ngrx <feature-name> --module=libs/studgr-redux/src/lib/studgr-redux.module.ts --directory studgr-redux/<feature-name> --facade
 ```
 
+- new StudyGroup app component: 
+```bash
+nx g @nrwl/angular:component <path-after-app-folder>/<component-name> --project=frontend-web-study-group
+```
+
 This project was generated using [Nx](https://nx.dev).
 
 <p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>

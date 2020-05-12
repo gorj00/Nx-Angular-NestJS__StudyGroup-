@@ -12,6 +12,7 @@ import { MapsComponent } from '../../pages/maps/maps.component';
 import { UserProfileComponent } from '../../pages/user-profile/user-profile.component';
 import { StudyGroupsContainer } from '../../pages/study-groups/study-groups.container';
 import { StudyGroupsComponent } from '../../pages/study-groups/study-groups.component';
+import { LightTableComponent } from '../../pages/ui-web-pages/tables/light-table/light-table.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -30,6 +31,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     StudyGroupsComponent,
     IconsComponent,
     MapsComponent,
+    LightTableComponent,
   ]
 })
 
