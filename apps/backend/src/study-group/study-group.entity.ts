@@ -7,45 +7,45 @@ export class StudyGroup {
     id_study_group: number;
 
     @Column()
-    id_student: number;
+    id_student_administrator: number;
 
     @Column()
-    sg_time: string;
+    name: string;
 
     @Column()
-    sg_description: string;
+    time: string;
 
     @Column()
-    sg_study_material: string;
+    description: string;
 
     @Column()
-    sg_place: string;
+    study_material: string;
 
     @Column()
-    sg_day: string;
+    place: string;
 
     @Column()
-    sg_meetings_commitment: string;
+    day: string;
 
     @Column()
-    sg_periodity: string;
+    meetings_commitment: string;
 
     @Column()
-    sg_min_members: number;
+    periodity: string;
 
     @Column()
-    sg_max_members: number;
+    min_members: number;
 
     @Column()
-    sg_additional_info: string;
+    max_members: number;
 
     @Column()
-    sg_status: string;
+    additional_info: string;
 
     @Column()
-    sg_accepting_members: string;
+    status: string;
 
-    @Column('varchar', { length: 225 })
-    sg_name;
+    @Column()
+    accepting_members: string;
 
 }

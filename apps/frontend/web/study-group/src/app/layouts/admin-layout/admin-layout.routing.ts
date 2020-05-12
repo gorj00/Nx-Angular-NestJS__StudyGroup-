@@ -8,9 +8,9 @@ import { TablesContainer } from '../../pages/tables/tables.container';
 import { TablesComponent } from '../../pages/tables/tables.component';
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'tables',         component: TablesContainer },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'student-profile', component: UserProfileComponent },
+  { path: 'study-groups', component: TablesContainer },
+  { path: 'messages', component: IconsComponent },
+  { path: 'meetings', component: MapsComponent }
 ];
