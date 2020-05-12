@@ -5,33 +5,32 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ClipboardModule } from 'ngx-clipboard';
 
-import { AdminLayoutRoutes } from './admin-layout.routing';
+import { ContentLayoutRoutes } from './content-layout.routing';
 import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
 import { IconsComponent } from '../../pages/icons/icons.component';
 import { MapsComponent } from '../../pages/maps/maps.component';
 import { UserProfileComponent } from '../../pages/user-profile/user-profile.component';
-import { TablesComponent } from '../../pages/tables/tables.component';
-import { TablesContainer } from '../../pages/tables/tables.container';
+import { StudyGroupsContainer } from '../../pages/study-groups/study-groups.container';
+import { StudyGroupsComponent } from '../../pages/study-groups/study-groups.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-// import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(AdminLayoutRoutes),
+    RouterModule.forChild(ContentLayoutRoutes),
     FormsModule,
     HttpClientModule,
     NgbModule,
     ClipboardModule
   ],
   declarations: [
+    StudyGroupsContainer,
     DashboardComponent,
     UserProfileComponent,
-    TablesComponent,
+    StudyGroupsComponent,
     IconsComponent,
     MapsComponent,
-    TablesContainer,
   ]
 })
 
-export class AdminLayoutModule {}
+export class ContentLayoutModule {}

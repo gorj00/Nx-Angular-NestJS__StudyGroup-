@@ -3,7 +3,7 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { ContentLayoutComponent } from './layouts/content-layout/content-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 
 const routes: Routes =[
@@ -13,11 +13,11 @@ const routes: Routes =[
     pathMatch: 'full',
   }, {
     path: '',
-    component: AdminLayoutComponent,
+    component: ContentLayoutComponent,
     children: [
       {
         path: '',
-        loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
+        loadChildren: () => import('./layouts/content-layout/content-layout.module').then(m => m.ContentLayoutModule)
       }
     ]
   }, {

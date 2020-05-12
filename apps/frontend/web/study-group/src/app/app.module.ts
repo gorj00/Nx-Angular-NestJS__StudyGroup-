@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { ContentLayoutComponent } from './layouts/content-layout/content-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -28,7 +28,7 @@ import { StudgrCoreModule } from '@study-group/studgr-core';
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
+    ContentLayoutComponent,
     AuthLayoutComponent
   ],
   providers: [],
