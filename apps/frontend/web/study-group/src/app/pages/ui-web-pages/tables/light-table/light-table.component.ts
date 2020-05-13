@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-light-table',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./light-table.component.scss']
 })
 export class LightTableComponent implements OnInit {
+
+  @Input() tableTitle: string;
+  @Input() tableColumns: string[];
+  @Input() tableData: any;
 
   constructor() { }
 

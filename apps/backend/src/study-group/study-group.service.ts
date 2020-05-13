@@ -11,7 +11,9 @@ export class StudyGroupService {
   ) {}
 
   async getStudyGroups(): Promise<StudyGroup[]> {
-    return await this.studyGroupRepository.find();
+    return await this.studyGroupRepository.find({
+      take: 10
+  });
   }
 
   async getStudyGroup(id_study_group: number): Promise<StudyGroup[]> {

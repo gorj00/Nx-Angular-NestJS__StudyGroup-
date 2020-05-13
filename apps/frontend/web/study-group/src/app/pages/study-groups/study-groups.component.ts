@@ -9,9 +9,18 @@ import * as models from '@study-group/studgr-models/src/models/study-group-list.
 export class StudyGroupsComponent implements OnInit {
   @Input() studyGroups: models.IStudyGroupList[] = [];
 
-  constructor() { }
+  stdyGroupsTableTitle = 'Open Study Groups';
 
-  ngOnInit() {
-  }
+  studyGroupsTableColumns: string[] = [
+    'Study Group',
+    'Periodicity',
+    'Week Day',
+    'Time',
+    'Commitment',
+    'Accepting Members'
+  ];
 
+  constructor() {}
+
+  ngOnInit() {}
 }
