@@ -1,35 +1,44 @@
 import { NgModule } from '@angular/core';
-import { CommonModule, } from '@angular/common';
-import { BrowserModule  } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ContentLayoutComponent } from './layouts/content-layout/content-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 
-const routes: Routes =[
+const routes: Routes = [
   {
     path: '',
     redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }, {
+    pathMatch: 'full'
+  },
+  {
     path: '',
     component: ContentLayoutComponent,
     children: [
       {
         path: '',
-        loadChildren: () => import('./layouts/content-layout/content-layout.module').then(m => m.ContentLayoutModule)
+        loadChildren: () =>
+          import('./layouts/content-layout/content-layout.module').then(
+            m => m.ContentLayoutModule
+          )
       }
     ]
-  }, {
+  },
+  {
     path: '',
     component: AuthLayoutComponent,
     children: [
       {
         path: '',
-        loadChildren: () => import('./layouts/auth-layout/auth-layout.module').then(m => m.AuthLayoutModule)
+        loadChildren: () =>
+          import('./layouts/auth-layout/auth-layout.module').then(
+            m => m.AuthLayoutModule
+          )
       }
     ]
-  }, {
+  },
+  {
     path: '**',
     redirectTo: 'dashboard'
   }
@@ -39,11 +48,10 @@ const routes: Routes =[
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes,{
+    RouterModule.forRoot(routes, {
       useHash: true
     })
   ],
-  exports: [
-  ],
+  exports: []
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

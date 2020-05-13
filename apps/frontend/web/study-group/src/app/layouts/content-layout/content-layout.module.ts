@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ClipboardModule } from 'ngx-clipboard';
+import { UiWebPagesModule } from '../../ui-web-pages/ui-web-pages.module';
 
 import { ContentLayoutRoutes } from './content-layout.routing';
 import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
@@ -11,7 +12,7 @@ import { IconsComponent } from '../../pages/icons/icons.component';
 import { StudentProfileComponent } from '../../pages/student-profile/student-profile.component';
 import { StudyGroupsContainer } from '../../pages/study-groups/study-groups.container';
 import { StudyGroupsComponent } from '../../pages/study-groups/study-groups.component';
-import { LightTableComponent } from '../../pages/ui-web-pages/tables/light-table/light-table.component';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -21,16 +22,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     HttpClientModule,
     NgbModule,
-    ClipboardModule
+    // TODO: Delete
+    ClipboardModule,
+    UiWebPagesModule,
   ],
   declarations: [
     StudyGroupsContainer,
     DashboardComponent,
     StudentProfileComponent,
     StudyGroupsComponent,
-    IconsComponent,
-    LightTableComponent,
+    IconsComponent
   ]
 })
-
 export class ContentLayoutModule {}

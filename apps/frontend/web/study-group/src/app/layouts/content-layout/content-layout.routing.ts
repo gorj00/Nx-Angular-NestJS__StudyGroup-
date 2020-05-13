@@ -6,6 +6,7 @@ import { StudentProfileComponent } from '../../pages/student-profile/student-pro
 import { StudyGroupsContainer } from '../../pages/study-groups/study-groups.container';
 
 export const ContentLayoutRoutes: Routes = [
+          // Website links
          { path: 'dashboard', component: DashboardComponent },
          { path: 'student-profile', component: StudentProfileComponent },
          { path: 'study-groups', component: StudyGroupsContainer },
