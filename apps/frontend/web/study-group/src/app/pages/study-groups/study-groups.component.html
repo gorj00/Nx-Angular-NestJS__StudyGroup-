@@ -803,10 +803,13 @@
 
   <!-- Table -->
   <!-- <app-light-table
-    [tableTitle]="stdyGroupsTableTitle"
-    [tableColumns]="studyGroupsTableColumns"
-    [tableData]="studyGroups"
+  [tableTitle]="stdyGroupsTableTitle"
+  [tableColumns]="studyGroupsTableColumns"
+  [tableData]="studyGroups"
   >
+    <app-light-table-row [numberOfColumns]="6">
+    </app-light-table-row>
+
     <tr *ngFor="let studyGroup of studyGroups">
       <th scope="row">
         <div class="media align-items-center">

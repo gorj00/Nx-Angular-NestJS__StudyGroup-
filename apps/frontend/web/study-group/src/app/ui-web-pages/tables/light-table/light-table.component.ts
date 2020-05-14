@@ -9,7 +9,7 @@ export class LightTableComponent implements OnInit {
 
   @Input() tableTitle: string;
   @Input() tableColumns: string[];
-  @Input() tableData: any;
+  @Input() tableData: string[];
 
   constructor() { }
 

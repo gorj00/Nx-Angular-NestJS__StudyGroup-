@@ -7,7 +7,7 @@ import * as models from '@study-group/studgr-models/src/models/study-group-list.
   styleUrls: ['./tables.component.scss']
 })
 export class TablesComponent implements OnInit {
-  @Input() studyGroups: models.IStudyGroupList[] = [];
+
 
   constructor() { }
 

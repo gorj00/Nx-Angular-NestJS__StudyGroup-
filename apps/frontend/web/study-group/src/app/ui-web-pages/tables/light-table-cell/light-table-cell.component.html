@@ -1,0 +1,98 @@
+<ng-container [ngSwitch]="cellType">
+
+  <ng-container *ngSwitchCase="'nameWithAvatar'">
+    <div class="media align-items-center">
+      <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
+        <img alt="Image placeholder" [src]="imageUrl">
+      </a>
+      <div class="media-body">
+        <span class="mb-0 text-sm">{{ name }}</span>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'text'">
+    <ng-content></ng-content>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'status'">
+    <span *ngIf="status === 'pending'" class="badge badge-dot mr-4">
+      <i class="bg-warning"></i> {{ status }}
+    </span>
+    <span *ngIf="status === 'completed'" class="badge badge-dot mr-4">
+      <i class="bg-success"></i> {{ status }}
+    </span>
+    <span *ngIf="status === 'delayed'" class="badge badge-dot mr-4">
+      <i class="bg-danger"></i> {{ status }}
+    </span>
+    <span *ngIf="status === 'on schedule'" class="badge badge-dot">
+      <i class="bg-info"></i> {{ status }}
+    </span>
+  </ng-container>
+
+  <!-- TODO: Create smaller components -->
+  <ng-container *ngSwitchCase="'avatarGroup'">
+    <div class="avatar-group">
+      <a href="javascript:void(0)" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
+        <img alt="Image placeholder" src="../assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
+      </a>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'percentage'">
+    <div class="d-flex align-items-center">
+      <span class="mr-2">{{ percentage }}</span>
+      <div>
+        <div class="progress">
+          <div *ngIf="status === 'pending'"
+            class="progress-bar bg-warning"
+            role="progressbar"
+            [attr.aria-valuenow]="percentage"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            [style]="'width: ' + percentage + ';'"
+          ></div>
+          <div *ngIf="status === 'completed'"
+            class="progress-bar bg-success"
+            role="progressbar"
+            [attr.aria-valuenow]="percentage"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            [style]="'width: ' + percentage + ';'"
+          ></div>
+          <div *ngIf="status === 'delayed'"
+            class="progress-bar bg-danger"
+            role="progressbar"
+            [attr.aria-valuenow]="percentage"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            [style]="'width: ' + percentage + ';'"
+          ></div>
+          <div *ngIf="status === 'on schedule'"
+            class="progress-bar bg-info"
+            role="progressbar"
+            [attr.aria-valuenow]="percentage"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            [style]="'width: ' + percentage + ';'"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- TODO: Create smaller components -->
+  <ng-container *ngSwitchCase="'actions'" class="text-right">
+    <div ngbDropdown placement="bottom-right">
+      <a class="btn btn-sm btn-icon-only text-light" ngbDropdownToggle>
+        <i class="fas fa-ellipsis-v"></i>
+      </a>
+      <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+        <a class="dropdown-item" href="javascript:void(0)">
+          Action
+        </a>
+      </div>
+    </div>
+  </ng-container>
+
+</ng-container>

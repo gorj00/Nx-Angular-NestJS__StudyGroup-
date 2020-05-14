@@ -31,7 +31,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DashboardComponent,
     StudentProfileComponent,
     StudyGroupsComponent,
-    IconsComponent
+    IconsComponent,
   ]
 })
 export class ContentLayoutModule {}

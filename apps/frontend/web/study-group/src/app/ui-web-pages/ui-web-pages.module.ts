@@ -12,6 +12,9 @@ import { TablesComponent } from './tables/tables.component';
 import { MapsComponent } from './maps/maps.component';
 import { IconsComponent } from './icons/icons.component';
 import { ClipboardModule } from 'ngx-clipboard';
+import { LightTableComponent } from './tables/light-table/light-table.component';
+import { LightTableRowComponent } from './tables/light-table-row/light-table-row.component';
+import { LightTableCellComponent } from './tables/light-table-cell/light-table-cell.component';
 
 @NgModule({
   imports: [
@@ -26,7 +29,20 @@ import { ClipboardModule } from 'ngx-clipboard';
     UserProfileComponent,
     TablesComponent,
     MapsComponent,
-    IconsComponent
+    IconsComponent,
+    LightTableComponent,
+    LightTableRowComponent,
+    LightTableCellComponent,
+  ],
+  exports: [
+    DashboardComponent,
+    UserProfileComponent,
+    TablesComponent,
+    MapsComponent,
+    IconsComponent,
+    LightTableComponent,
+    LightTableRowComponent,
+    LightTableCellComponent,
   ]
 })
 export class UiWebPagesModule {}

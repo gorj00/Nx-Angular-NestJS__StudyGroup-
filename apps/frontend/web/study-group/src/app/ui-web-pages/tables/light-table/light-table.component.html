@@ -1,19 +1,26 @@
 <div class="row">
   <div class="col">
     <div class="card shadow">
+
       <div class="card-header border-0">
         <h3 class="mb-0">{{ tableTitle }}</h3>
       </div>
+
       <div class="table-responsive">
         <table class="table align-items-center table-flush">
           <thead class="thead-light">
             <tr>
-              <th *ngFor="let columnTitle of tableColumns" scope="col">{{ columnTitle }}</th>
+              <th
+                *ngFor="let columnTitle of tableColumns"
+                scope="col"
+              >
+                  {{ columnTitle }}
+              </th>
               <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
-           <ng-content></ng-content>
+            <ng-content></ng-content>
           </tbody>
         </table>
       </div>
@@ -44,6 +51,7 @@
           </ul>
         </nav>
       </div>
+
     </div>
   </div>
 </div>
