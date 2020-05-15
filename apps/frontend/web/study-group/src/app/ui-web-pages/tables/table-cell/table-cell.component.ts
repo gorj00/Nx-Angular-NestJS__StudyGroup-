@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   // tslint:disable-next-line: component-selector
-  selector: '[app-light-table-cell]',
-  templateUrl: './light-table-cell.component.html',
-  styleUrls: ['./light-table-cell.component.scss']
+  selector: '[app-table-cell]',
+  templateUrl: './table-cell.component.html',
+  styleUrls: ['./table-cell.component.scss']
 })
-export class LightTableCellComponent implements OnInit {
+export class TableCellComponent implements OnInit {
 
   @Input() cellType:
           'nameWithAvatar' |

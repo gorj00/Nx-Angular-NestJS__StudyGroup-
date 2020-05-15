@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-light-table',
-  templateUrl: './light-table.component.html',
-  styleUrls: ['./light-table.component.scss']
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.scss']
 })
-export class LightTableComponent implements OnInit {
+export class TableComponent implements OnInit {
 
   @Input() tableDarkMode = false;
   @Input() tablePagerOn = false;
