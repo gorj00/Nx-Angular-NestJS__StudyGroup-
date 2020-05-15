@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "nx": "nx",
+    "studgr": "nx run frontend-web-study-group:serve:development",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
