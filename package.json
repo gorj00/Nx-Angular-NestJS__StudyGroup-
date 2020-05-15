@@ -6,6 +6,7 @@
     "ng": "ng",
     "nx": "nx",
     "studgr": "nx run frontend-web-study-group:serve:development",
+    "push": "git push --all -u",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
