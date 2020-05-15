@@ -19,7 +19,8 @@
       "@study-group/*": ["libs/*"],
       "@study-group/studgr-redux": ["libs/studgr-redux/src/index.ts"],
       "@study-group/studgr-core": ["libs/studgr-core/src/index.ts"],
-      "@study-group/studgr-models": ["libs/studgr-models/src/index.ts"]
+      "@study-group/studgr-models": ["libs/studgr-models/src/index.ts"],
+      "@env/*": ["libs/studgr-core/src/environments/*"]
     }
   },
   "exclude": ["node_modules", "tmp", "apps/nativescript-*"],

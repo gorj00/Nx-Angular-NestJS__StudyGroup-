@@ -7,7 +7,7 @@ import { reducers } from './studgr-redux/studgr-redux.reducers';
 import * as fromDashboard from './studgr-redux/dashboard/dashboard.reducer';
 import { DashboardEffects } from './studgr-redux/dashboard/dashboard.effects';
 import { DashboardFacade } from './studgr-redux/dashboard/dashboard.facade';
-import { environment } from '../../../apps/frontend/web/study-group/src/environments/environment';
+import { environment } from '@env/environment';
 import * as fromStudyGroupList from './studgr-redux/study-group-list/study-group-list.reducer';
 import { StudyGroupListEffects } from './studgr-redux/study-group-list/study-group-list.effects';
 import { StudyGroupListFacade } from './studgr-redux/study-group-list/study-group-list.facade';
