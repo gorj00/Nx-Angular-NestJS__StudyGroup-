@@ -1,14 +1,27 @@
-<div class="row">
+<div class="row" [ngClass]="{'mt-5': tableDarkMode}">
   <div class="col">
-    <div class="card shadow">
+    <div class="card shadow" [ngClass]="{'bg-default': tableDarkMode}">
 
-      <div class="card-header border-0">
-        <h3 class="mb-0">{{ tableTitle }}</h3>
+      <div
+        class="card-header border-0"
+        [ngClass]="{'bg-transparent': tableDarkMode}"
+      >
+        <h3 class="mb-0" [ngClass]="{'text-white': tableDarkMode}">
+          {{ tableTitle }}
+        </h3>
       </div>
 
       <div class="table-responsive">
-        <table class="table align-items-center table-flush">
-          <thead class="thead-light">
+        <table
+          class="table align-items-center table-flush"
+          [ngClass]="{'table-dark': tableDarkMode}"
+        >
+          <thead
+            [ngClass]="{
+              'thead-dark': tableDarkMode,
+              'thead-light': !tableDarkMode
+            }"
+          >
             <tr>
               <th
                 *ngFor="let columnTitle of tableColumns"
@@ -26,7 +39,10 @@
       </div>
 
       <!-- Table Pager -->
-      <div class="card-footer py-4">
+      <div
+        class="card-footer py-4"
+        *ngIf="tablePagerOn"
+      >
         <nav aria-label="...">
           <ul class="pagination justify-content-end mb-0">
             <li class="page-item disabled">

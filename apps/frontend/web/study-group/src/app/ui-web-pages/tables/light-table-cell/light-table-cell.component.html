@@ -36,45 +36,54 @@
       <a href="javascript:void(0)" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
         <img alt="Image placeholder" src="../assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
       </a>
+      <a href="javascript:void(0)" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
+        <img alt="Image placeholder" src="../assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
+      </a>
+      <a href="javascript:void(0)" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
+        <img alt="Image placeholder" src="../assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
+      </a>
+      <a href="javascript:void(0)" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
+        <img alt="Image placeholder" src="../assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
+      </a>
     </div>
   </ng-container>
 
-  <ng-container *ngSwitchCase="'percentage'">
+  <ng-container *ngSwitchCase="'progress'">
     <div class="d-flex align-items-center">
       <span class="mr-2">{{ percentage }}</span>
       <div>
         <div class="progress">
-          <div *ngIf="status === 'pending'"
+          <div *ngIf="progressColor === 'warning'"
             class="progress-bar bg-warning"
             role="progressbar"
             [attr.aria-valuenow]="percentage"
             aria-valuemin="0"
             aria-valuemax="100"
-            [style]="'width: ' + percentage + ';'"
+            [style]="'width: ' + percentage + '%;'"
           ></div>
-          <div *ngIf="status === 'completed'"
+          <div *ngIf="progressColor === 'success'"
             class="progress-bar bg-success"
             role="progressbar"
             [attr.aria-valuenow]="percentage"
             aria-valuemin="0"
             aria-valuemax="100"
-            [style]="'width: ' + percentage + ';'"
+            [style]="'width: ' + percentage + '%;'"
           ></div>
-          <div *ngIf="status === 'delayed'"
+          <div *ngIf="progressColor === 'danger'"
             class="progress-bar bg-danger"
             role="progressbar"
             [attr.aria-valuenow]="percentage"
             aria-valuemin="0"
             aria-valuemax="100"
-            [style]="'width: ' + percentage + ';'"
+            [style]="'width: ' + percentage + '%;'"
           ></div>
-          <div *ngIf="status === 'on schedule'"
+          <div *ngIf="progressColor === 'info'"
             class="progress-bar bg-info"
             role="progressbar"
             [attr.aria-valuenow]="percentage"
             aria-valuemin="0"
             aria-valuemax="100"
-            [style]="'width: ' + percentage + ';'"
+            [style]="'width: ' + percentage + '%;'"
           ></div>
         </div>
       </div>

@@ -94,7 +94,7 @@
 <!-- Page content -->
 <div class="container-fluid mt--7">
   <!-- Table -->
-  <div class="row">
+  <!-- <div class="row">
     <div class="col">
       <div class="card shadow">
         <div class="card-header border-0">
@@ -183,7 +183,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- Dark table -->
   <div class="row mt-5">
     <div class="col">
@@ -501,10 +501,17 @@
     </div>
   </div>
 
-  <!-- Table -->
+  <!-- Default Table -->
   <app-light-table
-    [tableTitle]="'Light Table Example'"
-    [tableColumns]="['Column1', 'Column2', 'Column3', 'Column4']"
+    [tableTitle]="'Dark Table Example'"
+    [tablePagerOn]="true"
+    [tableColumns]="[
+      'Avatar with name',
+      'Status',
+      'Text',
+      'Avatar Group',
+      'Progress'
+    ]"
     [tableData]="[]"
   >
     <tr app-light-table-row>
@@ -525,15 +532,153 @@
         app-light-table-cell
         [cellType]="'text'"
       >
-        Hello
+        info
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'avatarGroup'"
+      >
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'progress'"
+        [percentage]="45"
+        [progressColor]="'danger'"
+      >
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'actions'"
+      >
+      </td>
+    </tr>
+    <tr app-light-table-row>
+      <th
+        app-light-table-cell
+        [cellType]="'nameWithAvatar'"
+        [imageUrl]="'http://localhost:4200/assets/img/theme/angular.jpg'"
+        [name]="'Study Group Another Name'"
+      >
+      </th>
+      <td
+        app-light-table-cell
+        [cellType]="'status'"
+        [status]="'completed'"
+      >
       </td>
       <td
         app-light-table-cell
         [cellType]="'text'"
       >
-        Hello
+        info
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'avatarGroup'"
+      >
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'progress'"
+        [percentage]="80"
+        [progressColor]="'info'"
+      >
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'actions'"
+      >
       </td>
     </tr>
   </app-light-table>
-
+  <!-- Dark Table -->
+  <app-light-table
+    [tableDarkMode]="true"
+    [tableTitle]="'Dark Table Example'"
+    [tableColumns]="[
+      'Avatar with name',
+      'Status',
+      'Text',
+      'Avatar Group',
+      'Progress'
+    ]"
+    [tableData]="[]"
+  >
+    <tr app-light-table-row>
+      <th
+        app-light-table-cell
+        [cellType]="'nameWithAvatar'"
+        [imageUrl]="'http://localhost:4200/assets/img/theme/angular.jpg'"
+        [name]="'Study Group Name'"
+      >
+      </th>
+      <td
+        app-light-table-cell
+        [cellType]="'status'"
+        [status]="'pending'"
+      >
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'text'"
+      >
+        info
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'avatarGroup'"
+      >
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'progress'"
+        [percentage]="45"
+        [progressColor]="'danger'"
+      >
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'actions'"
+      >
+      </td>
+    </tr>
+    <tr app-light-table-row>
+      <th
+        app-light-table-cell
+        [cellType]="'nameWithAvatar'"
+        [imageUrl]="'http://localhost:4200/assets/img/theme/angular.jpg'"
+        [name]="'Study Group Another Name'"
+      >
+      </th>
+      <td
+        app-light-table-cell
+        [cellType]="'status'"
+        [status]="'completed'"
+      >
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'text'"
+      >
+        info
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'avatarGroup'"
+      >
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'progress'"
+        [percentage]="80"
+        [progressColor]="'info'"
+      >
+      </td>
+      <td
+        app-light-table-cell
+        [cellType]="'actions'"
+      >
+      </td>
+    </tr>
+  </app-light-table>
 </div>

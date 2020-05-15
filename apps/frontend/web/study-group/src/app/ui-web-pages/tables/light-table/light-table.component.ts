@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class LightTableComponent implements OnInit {
 
+  @Input() tableDarkMode = false;
+  @Input() tablePagerOn = false;
   @Input() tableTitle: string;
   @Input() tableColumns: string[];
   @Input() tableData: string[];

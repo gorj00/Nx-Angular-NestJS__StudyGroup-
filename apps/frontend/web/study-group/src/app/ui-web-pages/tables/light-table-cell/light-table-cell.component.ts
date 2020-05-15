@@ -13,13 +13,20 @@ export class LightTableCellComponent implements OnInit {
                     'text' |
                   'status' |
              'avatarGroup' |
-              'percentage' |
+                'progress' |
                  'actions';
-  @Input() name: string;     // @ref 'nameWithAvatar'
-  @Input() imageUrl: string; // @ref 'nameWithAvatar'
-  @Input() status: string;
-  @Input() avatarGroup: string[];
-  @Input() percentage: string;
+
+  @Input() progressColor:           // @ref 'progress'
+                 'warning' |
+                 'success' |
+                 'danger'  |
+                 'info';
+
+  @Input() name: string;            // @ref 'nameWithAvatar'
+  @Input() imageUrl: string;        // @ref 'nameWithAvatar'
+  @Input() status: string;          // @ref 'status'
+  @Input() avatarGroup: string[];   // @ref 'avatarGroup'
+  @Input() percentage: string;      // @ref 'progress
 
   constructor() { }
 
