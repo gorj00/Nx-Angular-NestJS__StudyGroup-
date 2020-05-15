@@ -6,6 +6,8 @@
 // General styles
 
 .table {
+  overflow: hidden;
+
     thead th {
         padding-top: $table-head-spacer-y;
         padding-bottom: $table-head-spacer-y;
