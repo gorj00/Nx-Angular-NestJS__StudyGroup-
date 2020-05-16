@@ -8,16 +8,20 @@ import * as models from '@study-group/studgr-models/src/models/study-group-list.
 })
 export class StudyGroupsComponent implements OnInit {
   @Input() studyGroups: models.IStudyGroupList[] = [];
+  @Input() studentsStudyGroups: models.IStudyGroupList[] = [];
 
-  stdyGroupsTableTitle = 'Open Study Groups';
+  studyGroupsTableTitle = 'Open Study Groups';
+  yourStudyGroupsTableTitle = 'Your Study Groups';
 
   studyGroupsTableColumns: string[] = [
-    'Study Group',
-    'Periodicity',
-    'Week Day',
+    'Name',
     'Time',
-    'Commitment',
-    'Accepting Members'
+    'Place',
+    'Week day',
+    'Group commitment',
+    'Periodity',
+    'Status',
+    'Group filled'
   ];
 
   constructor() {}

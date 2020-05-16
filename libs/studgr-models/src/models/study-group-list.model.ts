@@ -37,4 +37,8 @@ export interface IStudyGroupList {
   additionalInfo?: string;
   status: string;
   acceptingMembers: string;
+  /*
+  TODO: membersCount
+  imageUrl
+  */
 }

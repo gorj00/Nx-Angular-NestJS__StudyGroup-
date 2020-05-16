@@ -118,3 +118,15 @@
         }
     }
 }
+
+app-table .row.mt-5,
+app-table .row {
+
+    margin-top: 0 !important;
+    margin-bottom: 4rem !important;
+
+}
+
+.mt--7, .my--7 {
+  margin-top: -5rem !important;
+}
