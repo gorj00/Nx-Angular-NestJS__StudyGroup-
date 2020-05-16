@@ -14,30 +14,7 @@ export class StudyGroupListEffects {
     ofType<actions.StudyGroupListRequest>(EVENTS.REQUEST_ALL),
     switchMap(() =>
         this.service.fetchGroupList().pipe(
-            map((data: models.IStudyGroupListDBResponse[]) => {
-              const dataMapped: models.IStudyGroupList[] = [];
-              data.forEach(studyGroup => {
-                const studyGroupRefactored = {
-                  studyGroupId: studyGroup.id_study_group,
-                  studentId: studyGroup.id_student_administrator,
-                  name: studyGroup.name,
-                  time: studyGroup.time,
-                  description: studyGroup.description,
-                  studyMaterial: studyGroup.study_material,
-                  place: studyGroup.place,
-                  day: studyGroup.day,
-                  meetingsCommitment: studyGroup.meetings_commitment,
-                  periodity: studyGroup.periodity,
-                  minMembers: studyGroup.min_members,
-                  maxMembers: studyGroup.max_members,
-                  additionalInfo: studyGroup.additional_info,
-                  status: studyGroup.status,
-                  acceptingMembers: studyGroup.accepting_members,
-                };
-                dataMapped.push(studyGroupRefactored);
-              });
-              return new actions.StudyGroupListSResponse(dataMapped)
-            }),
+            map((data: models.IStudyGroupList[]) => new actions.StudyGroupListSResponse(data)),
             catchError(error => of(new actions.StudyGroupFailure(error))),
         ),
     ),
