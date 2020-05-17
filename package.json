@@ -48,6 +48,7 @@
     "@nestjs/common": "^6.8.3",
     "@nestjs/config": "^0.4.0",
     "@nestjs/core": "^6.8.3",
+    "@nestjs/passport": "^7.0.0",
     "@nestjs/platform-express": "^6.8.3",
     "@nestjs/typeorm": "^7.0.0",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",

@@ -1,0 +1,21 @@
+.safety {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.message {
+  color: #517497;
+  text-align: center;
+}
+
+.bg-default {
+  position: relative;
+  min-height: 100vh;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
