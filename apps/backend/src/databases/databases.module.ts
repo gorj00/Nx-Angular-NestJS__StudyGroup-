@@ -5,9 +5,9 @@ import { ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 // DB Entities
-import { DemoModule } from '../demo/demo.module';
-import { StudyGroupModule } from '../study-group/study-group.module';
-import { SubjectModule } from '../subject/subject.module';
+import { DemoModule } from '../app/demo/demo.module';
+import { StudyGroupModule } from '../app/study-group/study-group.module';
+import { SubjectModule } from '../app/subject/subject.module';
 
 
 /* Generate a new feature:

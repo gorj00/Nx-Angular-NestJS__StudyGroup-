@@ -8,6 +8,7 @@ import { ConfigModule } from '@nestjs/config';
 
 // Modules
 import { DatabasesModule } from '../databases/databases.module';
+import { AuthModule } from '../auth/auth.module';
 
 // Databases config files
 import StudyGroup_MariaDB from '../databases/study-group.mariadb.config';
@@ -19,6 +20,7 @@ import StudyGroup_MariaDB from '../databases/study-group.mariadb.config';
       isGlobal: true,
     }),
     DatabasesModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService]
